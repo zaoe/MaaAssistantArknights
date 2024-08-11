@@ -13,6 +13,7 @@
 
 using System;
 using System.Threading.Tasks;
+using MaaWpfGui.Configuration;
 using MaaWpfGui.Constants;
 using MaaWpfGui.Helper;
 using Stylet;
@@ -26,7 +27,7 @@ namespace MaaWpfGui.ViewModels.UI
     // ReSharper disable once ClassNeverInstantiated.Global
     public class AnnouncementViewModel : Screen
     {
-        private string _announcementInfo = ConfigurationHelper.GetValue(ConfigurationKeys.AnnouncementInfo, string.Empty);
+        private string _announcementInfo = ConfigFactory.Root.AnnouncementInfo.Info;
 
         /// <summary>
         /// Gets the announcement info.
@@ -38,7 +39,7 @@ namespace MaaWpfGui.ViewModels.UI
             private set
             {
                 SetAndNotify(ref _announcementInfo, value);
-                ConfigurationHelper.SetValue(ConfigurationKeys.AnnouncementInfo, value);
+                ConfigFactory.Root.AnnouncementInfo.Info = value;
             }
         }
 

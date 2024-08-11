@@ -3,7 +3,7 @@
 // Copyright (C) 2021 MistEO and Contributors
 //
 // This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Affero General Public License v3.0 only as published by
+// it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // any later version.
 //
@@ -33,6 +33,8 @@ namespace MaaWpfGui.Configuration
 
         public UpdateVersionType VersionType { get; set; } = UpdateVersionType.Stable;
 
+        public string ResourceApi { get; set; } = string.Empty;
+
         public bool UpdateCheck { get; set; } = true;
 
         public bool UpdateAutoCheck { get; set; } = false;
@@ -61,7 +63,7 @@ namespace MaaWpfGui.Configuration
             /// <summary>
             /// 开发版
             /// </summary>
-            Beta
+            Beta,
         }
     }
 }
